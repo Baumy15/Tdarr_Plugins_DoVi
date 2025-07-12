@@ -31,14 +31,15 @@ var plugin = function (args) {
     var extension = (0, fileUtils_1.getContainer)(args.inputFileObj._id);
     var outputFileId = '';
     var inputArguments = [];
-    var outputArguments = [
-        '-movflags', '+faststart',
-        //copy timestamp
-        '-copyts',
-        //passthrough(0),cfr (1), vfr (2), auto (-1)
-        '-fps_mode', '0',
-        '-muxdelay', '0',
-    ];
+var outputArguments = [
+    '-strict', '-2',
+    '-movflags', '+faststart',
+    //copy timestamp
+    '-copyts',
+    //passthrough(0),cfr (1), vfr (2), auto (-1)
+    '-fps_mode', '0',
+    '-muxdelay', '0',
+];
     //if (extension === 'mkv') {
         // Only remux the file as it is
     //    args.variables.ffmpegCommand.streams.forEach(function (stream) {
